@@ -18,6 +18,7 @@ def familia(request):
     cadena_texto3="familia guardada "+familia3.nombre+" "+str(familia3.DNI)+" "+familia3.fechadecumpleaños
     return HttpResponse(cadena_texto+" "+cadena_texto2+" "+cadena_texto3)
 
+#nueva manera de usar templates
 def templateapp(request):
 
     nom="Nahuel"
