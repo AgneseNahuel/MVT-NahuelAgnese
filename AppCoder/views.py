@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Familia
 from django.http import HttpResponse
+from django.template import loader
 
 
 # Create your views here.
@@ -17,3 +18,11 @@ def familia(request):
     cadena_texto3="familia guardada "+familia3.nombre+" "+str(familia3.DNI)+" "+familia3.fechadecumpleaños
     return HttpResponse(cadena_texto+" "+cadena_texto2+" "+cadena_texto3)
 
+def templateapp(request):
+
+    nom="Nahuel"
+    diccionario={"nombre":nom}
+
+    plantilla=loader.get_template("indexapp.html")
+    documento=plantilla.render(diccionario)
+    return HttpResponse(documento)
