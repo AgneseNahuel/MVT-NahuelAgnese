@@ -20,13 +20,7 @@ def familia(request):
 
 #nueva manera de usar templates
 def templateapp(request):
-
-    nom="Nahuel"
-    diccionario={"nombre":nom}
-
-    plantilla=loader.get_template("AppCoder/indexapp.html")
-    documento=plantilla.render(diccionario)
-    return HttpResponse(documento)
+    return render(request, "AppCoder/indexapp.html",{"nombre":"Nahuel Agnese"})
 
 def inicio(request):
     return render(request, "AppCoder/inicio.html")
