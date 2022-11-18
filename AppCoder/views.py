@@ -24,9 +24,9 @@ def templateapp(request):
     nom="Nahuel"
     diccionario={"nombre":nom}
 
-    plantilla=loader.get_template("indexapp.html")
+    plantilla=loader.get_template("AppCoder/indexapp.html")
     documento=plantilla.render(diccionario)
     return HttpResponse(documento)
 
 def inicio(request):
-    return HttpResponse("Pagina de Inicio")
+    return render(request, "AppCoder/inicio.html")
