@@ -24,3 +24,9 @@ def templateapp(request):
 
 def inicio(request):
     return render(request, "AppCoder/inicio.html")
+
+def familiaprueba(request):
+    familia1=Familia(nombre="Nahuel", DNI=40781317, fechadecumpleaños="1997-10-25")
+    familia2=Familia(nombre="Carolina", DNI=40781317, fechadecumpleaños="1997-10-25")
+    familia3=Familia(nombre="Nacho", DNI=40781317, fechadecumpleaños="1997-10-25")
+    return render(request, "AppCoder/familia.html",{"nombre1":"milipili"})
